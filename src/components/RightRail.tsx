@@ -3,6 +3,7 @@
 import { AlertTriangle, PiggyBank, TrendingDown } from "lucide-react";
 import { balances, transactions, yields } from "../lib/dummyData";
 import { formatCurrency } from "../lib/utils";
+import type { ReactNode } from "react";
 
 function computeBurnRate() {
   const out = transactions.filter((t) => t.type === "out");
@@ -28,6 +29,7 @@ export default function RightRail() {
   const avgDailyOut =
     transactions.filter((t) => t.type === "out").reduce((a, t) => a + Math.abs(t.amount), 0) / 30;
 
+  type AlertItem = { icon: ReactNode; title: string; detail: string };
   const alerts = [
     runway < 6 && {
       icon: <AlertTriangle size={14} className="text-neon-amber" />,
@@ -49,7 +51,7 @@ export default function RightRail() {
       title: "Expense spike",
       detail: "+20% vs 30d avg",
     },
-  ].filter(Boolean) as { icon: JSX.Element; title: string; detail: string }[];
+  ].filter(Boolean) as AlertItem[];
 
   return (
     <aside className="w-full sm:w-72 lg:w-80 px-4 sm:px-0 sm:pr-4 py-4 space-y-3">
