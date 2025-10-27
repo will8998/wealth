@@ -2,7 +2,9 @@ export function cn(...classes: Array<string | undefined | null | false>) {
   return classes.filter(Boolean).join(" ");
 }
 
-export function formatCurrency(value: number, currency = "USD") {
+export const DISPLAY_CURRENCY = "AUD";
+
+export function formatCurrency(value: number, currency = DISPLAY_CURRENCY) {
   return new Intl.NumberFormat(undefined, {
     style: "currency",
     currency,

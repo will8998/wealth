@@ -1,6 +1,6 @@
 "use client";
 
-import { Wallet, Upload, AlertTriangle } from "lucide-react";
+import { Wallet, AlertTriangle } from "lucide-react";
 import { formatCurrency } from "../lib/utils";
 import { balances, transactions } from "../lib/dummyData";
 import { motion } from "framer-motion";
@@ -29,7 +29,7 @@ export default function TopNav() {
         <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} className="glass neon-border px-3 py-1.5 rounded-full">
           <span className="text-xs tracking-widest uppercase text-neon-cyan">Wealth</span>
         </motion.div>
-        <h1 className="text-lg sm:text-xl font-medium">Family Office Cockpit</h1>
+        <h1 className="text-lg sm:text-xl font-medium">Bear & Bunny Wealth Dashboard</h1>
       </div>
       <div className="flex items-center gap-2 sm:gap-3">
         <div className="glass px-3 py-2 rounded-lg hidden sm:flex items-center gap-2">
@@ -40,10 +40,6 @@ export default function TopNav() {
             <div className="h-full bg-cyan-400/80" style={{ width: `${Math.round(ratio * 100)}%` }} />
           </div>
         </div>
-        <button className="glass px-3 py-2 rounded-lg text-sm flex items-center gap-2 hover:accent-glow-cyan">
-          <Upload size={16} />
-          Import CSV
-        </button>
         <button className="glass px-3 py-2 rounded-lg text-sm flex items-center gap-2 hover:accent-glow-amber">
           <AlertTriangle size={16} className="text-neon-amber" />
           {formatCurrency(mtdIncome)} MTD

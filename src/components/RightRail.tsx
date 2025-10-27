@@ -67,13 +67,7 @@ export default function RightRail() {
         </div>
       ))}
 
-      <div className="pt-4">
-        <h3 className="text-xs uppercase tracking-widest text-zinc-400 px-2">Quick Actions</h3>
-        <div className="grid grid-cols-2 gap-2 mt-2">
-          <button className="glass p-3 rounded-lg text-sm hover:accent-glow-cyan">Import CSV</button>
-          <button className="glass p-3 rounded-lg text-sm hover:accent-glow-violet">Watch Wallet</button>
-        </div>
-      </div>
+      {null}
     </aside>
   );
 }

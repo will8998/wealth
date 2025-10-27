@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Wealth Dashboard",
-  description: "Glass-Morphic Family Office Cockpit",
+  title: "Bear & Bunny Wealth Dashboard",
+  description: "Bear & Bunny glass-morphic family office cockpit",
 };
 
 export default function RootLayout({
