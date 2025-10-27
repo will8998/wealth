@@ -1,3 +1,54 @@
+# Glass-Morphic Wealth Dashboard
+
+Beautiful, interactive wealth cockpit: Income, Expenses, Yield, and Savings. Built with Next.js (App Router), Tailwind v4, Framer Motion, and Recharts.
+
+## Quickstart
+
+1) Require Node >= 20.9.0. If using nvm:
+
+```bash
+nvm use
+```
+
+2) Install dependencies:
+
+```bash
+npm install
+```
+
+3) Run dev server:
+
+```bash
+npm run dev
+```
+
+Open http://localhost:3000
+
+## Environment
+
+Copy `.env.example` to `.env.local` if you want Supabase:
+
+```bash
+cp .env.example .env.local
+```
+
+```
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+## Tech
+
+- Next.js 16 (App Router)
+- Tailwind CSS v4
+- Framer Motion
+- Recharts
+- Supabase client (placeholder)
+
+## Deploy
+
+- Vercel: set Node 20, include env vars if using Supabase.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
