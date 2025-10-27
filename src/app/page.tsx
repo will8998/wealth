@@ -1,5 +1,4 @@
 import TopNav from "../components/TopNav";
-import RightRail from "../components/RightRail";
 import IncomeBox from "../components/boxes/IncomeBox";
 import ExpensesBox from "../components/boxes/ExpensesBox";
 import YieldBox from "../components/boxes/YieldBox";
@@ -11,17 +10,12 @@ export default function Home() {
     <div className="min-h-screen">
       <TopNav />
       <TopMetrics />
-      <div className="flex gap-4 px-4 sm:px-6 pb-6">
-        <main className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <IncomeBox />
-          <ExpensesBox />
-          <YieldBox />
-          <SavingsBox />
-        </main>
-        <div className="hidden lg:block">
-          <RightRail />
-        </div>
-      </div>
+      <main className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 px-4 sm:px-6 pb-6">
+        <IncomeBox />
+        <ExpensesBox />
+        <YieldBox />
+        <SavingsBox />
+      </main>
     </div>
   );
 }
